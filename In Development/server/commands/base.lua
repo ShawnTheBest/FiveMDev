@@ -29,6 +29,8 @@ commands["BANDAGE"] = {perm = 0, help = "/bandage [ID]", args = {"nil"}}
 commands["PULSE"] = {perm = 0, help = "/pulse [ID]", args = {"nil"}}
 commands["INJECT"] = {perm = 0, help = "/inject [MORPHINE, ADRENALINE] [ID]", args = {"MORPHINE", "ADRENALINE"}}
 commands["SUICIDE"] = {perm = 0, help = "/suicide", args = {"nil"}}
+commands["HIDECHAT"] = {perm = 2, help = "/hidechat", args = {"nil"}}
+commands["SHOWCHAT"] = {perm = 2, help = "/showchat", args = {"nil"}}
 
 	----- JOB COMMANDS -----
 commands["TOW"] = {perm = 0, help = defaultHelp, args = {"nil"}}
@@ -47,6 +49,7 @@ commands["PING"] = {perm = 1, help = "/ping [ID]", args = {"nil"}}
 commands["BAN"] = {perm = 2, help = "/ban [ID] [REASON]", args = {"nil"}}
 commands["SETRANK"] = {perm = 2, help = "/setRank [0-7] [ID]", args = {"0", "1", "2", "3", "4", "5", "6", "7"}}
 commands["ADMINMODE"] = {perm = 2, help = defaultHelp, args = {"nil"}}
+commands["CLEARCHAT"] = {perm = 2, help = "/clearchat", args = {"nil"}}
 
 	----- SENIOR ADMIN COMMANDS -----
 commands["GIVE"] = {perm = 3, help = "/give [ITEM] [PLAYER] [AMOUNT]", args = {"MONEY"}}
@@ -329,6 +332,15 @@ AddEventHandler('FiveLife:Command-SUICIDE', function(sender, args)
 	TriggerClientEvent("FL:SuicideByGun", sender)
 end)
 
+RegisterServerEvent('FiveLife:Command-CHAT-HIDE')
+AddEventHandler('FiveLife:Command-CHAT-HIDE', function(sender, args)
+	TriggerClientEvent("chat:hide", sender)
+end)
+
+RegisterServerEvent('FiveLife:Command-CHAT-SHOW')
+AddEventHandler('FiveLife:Command-CHAT-SHOW', function(sender, args)
+	TriggerClientEvent("chat:show", sender)
+end)
 
 	--------------- MODERATOR COMMANDS ---------------
 RegisterServerEvent('FiveLife:Command-KICK')
@@ -467,7 +479,12 @@ AddEventHandler('FiveLife:Command-ADMINMODE', function(sender, args)
 	-- To be implemented
 end)
 
-
+RegisterServerEvent('FiveLife:Command-CLEARCHAT')
+AddEventHandler('FiveLife:Command-CLEARCHAT', function(sender)
+	logCommand(GetPlayerName(sender) .. " has cleared the chat.", 0)
+	TriggerClientEvent('chat:clear', -1)
+	TriggerClientEvent('chatMessage', -1, "["..sender.."]", {255, 0, 0}, "cleared chat!")
+end)
 
 	--------------- SENIOR ADMIN COMMANDS ---------------
 RegisterServerEvent('FiveLife:Command-GIVE')

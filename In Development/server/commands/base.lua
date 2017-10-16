@@ -8,8 +8,8 @@
 ]]-- ====================================================================================================================================
 
 	----- GENERAL COMMANDS -----
-commands["HIDECHAT"] = {perm = 2, help = "/hidechat", args = {"nil"}}
-commands["SHOWCHAT"] = {perm = 2, help = "/showchat", args = {"nil"}}
+commands["HIDECHAT"] = {perm = 0, help = "/hidechat", args = {"nil"}}
+commands["SHOWCHAT"] = {perm = 0, help = "/showchat", args = {"nil"}}
 
 	----- ADMINISTRATOR COMMANDS -----
 commands["CLEARCHAT"] = {perm = 2, help = "/clearchat", args = {"nil"}}

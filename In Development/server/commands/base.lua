@@ -15,13 +15,13 @@ commands["SHOWCHAT"] = {perm = 0, help = "/showchat", args = {"nil"}}
 commands["CLEARCHAT"] = {perm = 2, help = "/clearchat", args = {"nil"}}
 	--------------- GENERAL COMMANDS ---------------
 
-RegisterServerEvent('FiveLife:Command-CHAT-HIDE')
-AddEventHandler('FiveLife:Command-CHAT-HIDE', function(sender, args)
+RegisterServerEvent('FiveLife:Command-HIDECHAT')
+AddEventHandler('FiveLife:Command-HIDECHAT', function(sender, args)
 	TriggerClientEvent("chat:hide", sender)
 end)
 
-RegisterServerEvent('FiveLife:Command-CHAT-SHOW')
-AddEventHandler('FiveLife:Command-CHAT-SHOW', function(sender, args)
+RegisterServerEvent('FiveLife:Command-SHOWCHAT')
+AddEventHandler('FiveLife:Command-SHOWCHAT', function(sender, args)
 	TriggerClientEvent("chat:show", sender)
 end)
 

@@ -1,6 +1,6 @@
 --[[ ====================================================================================================================================
 
-													Copyright © 2017 GTAV-LIFE (Adam Masson)
+													Copyright ï¿½ 2017 GTAV-LIFE (Adam Masson)
 													This file is part of project GTAV-Life.
 		All rights reserved. No part of this material may be reproduced, distributed, or transmitted in any form or by any means, 
 			including copying, or other electronic or mechanical methods, without the prior written permission of the creator. 
@@ -185,7 +185,7 @@ banList = {
 	"steam:11000010bcd68aa", 
 	"steam:110000114b83f73", 
 	"steam:11000011916287a", 
-	"steam:11000011b0427e5"
+	"steam:11000011b0427e5",
 	"steam:11000010666ac05", 
 	"steam:1100001111f3396",  
 	"steam:110000107dcaa99", 

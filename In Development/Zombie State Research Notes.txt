@@ -1,0 +1,29 @@
+-(Zombie Mode Notes)-
+
+***Medical System Adjustments to fix***
+
+Have bool declared to check if player had been defibbed or cpr to induce pulse coming back. If not set player dead
+Disabling use of hospital while in "Deceased" state
+!!!!Rework Dragging!!!! Causes person to because to loose their ragdoll and enable "Zombie" state. rework dragging to not have the person lose their ragdoll state
+Detecting injuries while downed to keep applying damages to prevent immortality
+Separating pulse from blood amount so player doesn't register as a "Normal" pulse when given sufficient amoutn of blood
+Have Pulse based on not only blood. But other factors such as persons stamina, drug use "Healthyness", severities of injuries, types of injuries sustained.
+
+
+***Attempts to Fix With In game Solution***
+
+Cannot use the Hospital to fix
+Cannot use Morphine Overdose to induce death state again(Morphine Overdosing is broken)
+Adrenaline only induces "High" state as if player was alive but injured screen still pops up
+Bandages have no effect
+Headshots,Tazers, Falling,HeadButts, Beatings, Pistol whips cannot hurt the person(Immortal state)
+"Zombie" state cannot enter vehicle (Good thing)
+CPR will "Work" to bring back a pulse but they will still remain in the "Zombie" state
+Defib will also "Work" to bring back pusle but have no effect to the "Zombie" state
+
+***Things to try(Scrapped)***
+
+/Suicide to induce force Death
+Drowning
+Mountain lion attack
+
